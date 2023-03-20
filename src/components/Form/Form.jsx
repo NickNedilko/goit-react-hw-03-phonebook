@@ -8,7 +8,9 @@ class Form extends Component {
     name: '',
     number: '',
   };
+   
 
+    
   inputNameId = nanoid();
   inputNumberId = nanoid();
   handleInputChange = e => {
