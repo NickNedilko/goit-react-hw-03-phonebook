@@ -1,0 +1,26 @@
+.contactsList {
+  min-width: 350px;
+  margin-top: 30px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: #33269d;
+  border: 1px solid green;
+  border-radius: 10px;
+}
+
+.deleteBtn {
+  width: 100px;
+  padding: 5px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}

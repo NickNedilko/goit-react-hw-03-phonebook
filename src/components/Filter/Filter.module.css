@@ -1,0 +1,23 @@
+.filterWrapper {
+  width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #33269d;
+  border-radius: 10px;
+}
+
+.filterInput {
+  margin: 0 auto;
+  width: 200px;
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+}
+
+.filterText {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: white;
+  text-transform: uppercase;
+}
