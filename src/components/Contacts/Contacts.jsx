@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import css from './Contacts.module.css';
+import { RiDeleteBin6Line } from 'react-icons/ri';
 
 const Contacts = ({ contacts, onDeleteContact }) => {
   return (
@@ -16,7 +17,7 @@ const Contacts = ({ contacts, onDeleteContact }) => {
               type="button"
               onClick={() => onDeleteContact(id)}
             >
-              Delete
+              Delete <RiDeleteBin6Line />
             </button>
           </li>
         );

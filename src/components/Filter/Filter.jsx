@@ -1,11 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import css from './Filter.module.css';
+import { FcSearch } from 'react-icons/fc';
 
 const Filter = ({ value, onFilter }) => {
   return (
     <div className={css.filterWrapper}>
-      <p className={css.filterText}>Find contact by name</p>
+      <p className={css.filterText}>
+        Find contact by name <FcSearch />
+      </p>
       <label htmlFor="">
         <input
           className={css.filterInput}

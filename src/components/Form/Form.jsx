@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BsFillTelephonePlusFill } from 'react-icons/bs';
+
 import PropTypes from 'prop-types';
 import css from './Form.module.css';
 import { nanoid } from 'nanoid';
@@ -49,7 +51,7 @@ class Form extends Component {
         </label>
 
         <label htmlFor={this.inputNumberId}>
-          <span className={css.inputLabel}>Tel </span>
+          <span className={css.inputLabel}>Tel</span>
           <input
             className={css.formInput}
             id={this.inputNumberId}
@@ -63,7 +65,7 @@ class Form extends Component {
           />
         </label>
         <button type="submit" className={css.addBtn}>
-          Add contact
+          <BsFillTelephonePlusFill /> Add contact
         </button>
       </form>
     );
