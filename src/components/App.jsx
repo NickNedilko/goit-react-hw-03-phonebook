@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import css from './App.module.css';
 import Form from './Form/Form';
 import Contacts from './Contacts/Contacts';
@@ -8,15 +10,14 @@ import Filter from './Filter/Filter';
 class App extends Component {
   state = {
     contacts: [],
-
     filter: '',
   };
 
   componentDidMount() {
-    console.log('did mount');
     const contacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(contacts);
-    if (parsedContacts) {
+    console.log(parsedContacts);
+    if (parsedContacts.length) {
       this.setState({
         contacts: parsedContacts,
       });
@@ -38,7 +39,16 @@ class App extends Component {
         contact => contact.name.toLowerCase() === normalizedName
       )
     ) {
-      return alert(`${name} is already in contacts`);
+      return toast.warn(`${name} is already in contacts`, {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     }
 
     const contact = {
@@ -83,6 +93,18 @@ class App extends Component {
         <Contacts
           contacts={filterContact}
           onDeleteContact={this.deleteContact}
+        />
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
         />
       </div>
     );

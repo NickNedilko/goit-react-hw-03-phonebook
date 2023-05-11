@@ -8,9 +8,7 @@ class Form extends Component {
     name: '',
     number: '',
   };
-   
 
-    
   inputNameId = nanoid();
   inputNumberId = nanoid();
   handleInputChange = e => {
@@ -21,8 +19,7 @@ class Form extends Component {
   };
   formSubmit = e => {
     e.preventDefault();
-    const { onSubmit } = this.props;
-    onSubmit(this.state);
+    this.props.onSubmit(this.state);
     this.formReset();
   };
 
