@@ -39,16 +39,7 @@ class App extends Component {
         contact => contact.name.toLowerCase() === normalizedName
       )
     ) {
-      return toast.warn(`${name} is already in contacts`, {
-        position: 'top-right',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'light',
-      });
+      return toast.warn(`${name} is already in contacts`);
     }
 
     const contact = {
@@ -94,18 +85,7 @@ class App extends Component {
           contacts={filterContact}
           onDeleteContact={this.deleteContact}
         />
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
-        />
+        <ToastContainer position="top-right" autoClose={3000} />
       </div>
     );
   }
